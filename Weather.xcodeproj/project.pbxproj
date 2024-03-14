@@ -19,6 +19,7 @@
 		4DD0EB562BA2FC9100993AF0 /* CitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD0EB512BA2FC9100993AF0 /* CitiesViewController.swift */; };
 		4DD0EB572BA2FC9100993AF0 /* CitiesProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD0EB522BA2FC9100993AF0 /* CitiesProtocols.swift */; };
 		4DD0EB582BA2FC9100993AF0 /* CitiesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD0EB532BA2FC9100993AF0 /* CitiesInteractor.swift */; };
+		4DD0EB5B2BA2FE2800993AF0 /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD0EB5A2BA2FE2800993AF0 /* CityCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		4DD0EB512BA2FC9100993AF0 /* CitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesViewController.swift; sourceTree = "<group>"; };
 		4DD0EB522BA2FC9100993AF0 /* CitiesProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesProtocols.swift; sourceTree = "<group>"; };
 		4DD0EB532BA2FC9100993AF0 /* CitiesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesInteractor.swift; sourceTree = "<group>"; };
+		4DD0EB5A2BA2FE2800993AF0 /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		4DD0EB4E2BA2FC7900993AF0 /* Cities */ = {
 			isa = PBXGroup;
 			children = (
+				4DD0EB592BA2FE0E00993AF0 /* CityCell */,
 				4DD0EB4F2BA2FC9100993AF0 /* CitiesPresenter.swift */,
 				4DD0EB502BA2FC9100993AF0 /* CitiesRouter.swift */,
 				4DD0EB512BA2FC9100993AF0 /* CitiesViewController.swift */,
@@ -104,6 +107,14 @@
 				4DD0EB532BA2FC9100993AF0 /* CitiesInteractor.swift */,
 			);
 			path = Cities;
+			sourceTree = "<group>";
+		};
+		4DD0EB592BA2FE0E00993AF0 /* CityCell */ = {
+			isa = PBXGroup;
+			children = (
+				4DD0EB5A2BA2FE2800993AF0 /* CityCell.swift */,
+			);
+			path = CityCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +199,7 @@
 			files = (
 				4DD0EB542BA2FC9100993AF0 /* CitiesPresenter.swift in Sources */,
 				4DD0EB552BA2FC9100993AF0 /* CitiesRouter.swift in Sources */,
+				4DD0EB5B2BA2FE2800993AF0 /* CityCell.swift in Sources */,
 				4DD0EB562BA2FC9100993AF0 /* CitiesViewController.swift in Sources */,
 				4DD0EB572BA2FC9100993AF0 /* CitiesProtocols.swift in Sources */,
 				4DD0EB582BA2FC9100993AF0 /* CitiesInteractor.swift in Sources */,
