@@ -17,9 +17,9 @@ final class DependencyContainerAssembly: Assembly {
     }
     
     private func assembleServices(_ container: Container) {
-        container.register(CitiesServicesProtocol.self) { resolver in
+        container.register(CitiesServiceProtocol.self) { resolver in
             let provider = MoyaProvider<CitiesEndpoints>()
-            return CitiesServices(provider: provider)
+            return CitiesService(provider: provider)
         }
     }
 }

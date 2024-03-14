@@ -1,5 +1,5 @@
 //
-//  CitiesServices.swift
+//  CitiesService.swift
 //  Weather
 //
 //  Created by Mitya Mikhailov on 14.03.2024.
@@ -8,11 +8,11 @@
 import Foundation
 import Moya
 
-protocol CitiesServicesProtocol {
+protocol CitiesServiceProtocol {
     func getWeather(completion: @escaping(Result<Cities, NetworkError>) -> Void)
 }
 
-final class CitiesServices: CitiesServicesProtocol {
+final class CitiesService: CitiesServiceProtocol {
     
     private let provider: MoyaProvider<CitiesEndpoints>
     

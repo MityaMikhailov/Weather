@@ -12,10 +12,10 @@ import UIKit
 final class CitiesInteractor: CitiesInteractorProtocol {
 
     weak var presenter: CitiesPresenterProtocol?
-    private let citiesService: CitiesServicesProtocol
+    private let citiesService: CitiesServiceProtocol
     
     init(container: DependencyContainer) {
-        self.citiesService = container.resolve(CitiesServicesProtocol.self)!
+        self.citiesService = container.resolve(CitiesServiceProtocol.self)!
     }
     
     func fetchData() {
