@@ -14,6 +14,7 @@
 		4D2651442BA2FA8F00AD0384 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4D2651432BA2FA8F00AD0384 /* SnapKit */; };
 		4D2651472BA2FAA100AD0384 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 4D2651462BA2FAA100AD0384 /* Moya */; };
 		4D26514A2BA2FAB500AD0384 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 4D2651492BA2FAB500AD0384 /* Swinject */; };
+		4DB847932BA33C9B00601F85 /* EnumWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB847922BA33C9B00601F85 /* EnumWeather.swift */; };
 		4DD0EB542BA2FC9100993AF0 /* CitiesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD0EB4F2BA2FC9100993AF0 /* CitiesPresenter.swift */; };
 		4DD0EB552BA2FC9100993AF0 /* CitiesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD0EB502BA2FC9100993AF0 /* CitiesRouter.swift */; };
 		4DD0EB562BA2FC9100993AF0 /* CitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD0EB512BA2FC9100993AF0 /* CitiesViewController.swift */; };
@@ -34,6 +35,7 @@
 		4D2651362BA2F85300AD0384 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D2651392BA2F85300AD0384 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D26513B2BA2F85300AD0384 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DB847922BA33C9B00601F85 /* EnumWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumWeather.swift; sourceTree = "<group>"; };
 		4DD0EB4F2BA2FC9100993AF0 /* CitiesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesPresenter.swift; sourceTree = "<group>"; };
 		4DD0EB502BA2FC9100993AF0 /* CitiesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesRouter.swift; sourceTree = "<group>"; };
 		4DD0EB512BA2FC9100993AF0 /* CitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesViewController.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				4DD0EB662BA303B800993AF0 /* Helper */,
+				4DB847922BA33C9B00601F85 /* EnumWeather.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				4DD0EB622BA3023700993AF0 /* CitiesService.swift in Sources */,
 				4DD0EB5B2BA2FE2800993AF0 /* CityCell.swift in Sources */,
 				4DD0EB602BA3022A00993AF0 /* CitiesEndpoints.swift in Sources */,
+				4DB847932BA33C9B00601F85 /* EnumWeather.swift in Sources */,
 				4DD0EB562BA2FC9100993AF0 /* CitiesViewController.swift in Sources */,
 				4DD0EB682BA303D800993AF0 /* RequestDecoder.swift in Sources */,
 				4DD0EB642BA3024800993AF0 /* Cities.swift in Sources */,

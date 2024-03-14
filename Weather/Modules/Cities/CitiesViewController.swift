@@ -12,6 +12,7 @@ import UIKit
 final class CitiesViewController: UIViewController, CitiesViewProtocol {
 
 	var presenter: CitiesPresenterProtocol?
+    var model: Cities?
     
     private lazy var citiesTable: UITableView = {
         let table = UITableView()
@@ -46,11 +47,13 @@ final class CitiesViewController: UIViewController, CitiesViewProtocol {
 
 extension CitiesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        model = presenter?.getData()
+        return model?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = CityCell(style: .default, reuseIdentifier: "CityCell")
+        cell.configure(with: model!, city: indexPath.row)
         return cell
     }
     

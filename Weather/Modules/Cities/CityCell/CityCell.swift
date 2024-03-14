@@ -12,7 +12,7 @@ final class CityCell: UITableViewCell {
     
     private lazy var weatherImageView: UIImageView = {
         let imageView = UIImageView()
-        let image = UIImage(named: "night")
+        let image = UIImage(named: "01day")
         imageView.image = image
         return imageView
     }()
@@ -106,8 +106,54 @@ final class CityCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(with model: Cities) {
+    func configure(with model: Cities, city: Int) {
+        guard let timezone = model[city].timezone,
+              let weatherCode = model[city].current?.weatherCode,
+              let currentTemp = model[city].current?.temperature2M,
+              let minTemp = model[city].daily?.temperature2MMin![0],
+              let maxTemp = model[city].daily?.temperature2MMax![0] else { return }
         
+        let cityText = getCity(with: timezone)
+        let currentTime = getCurrentTime(withTimeZone: timezone)
+        let progress = progressTemp(max: maxTemp, min: minTemp, current: currentTemp)
+        
+        if (6...19).contains((Int(currentTime.components(separatedBy: ":").first!)!)) {
+            let weatherType = DayWeatherType(rawValue: weatherCode)!
+            let image = UIImage(named: weatherType.imageName)
+            weatherImageView.image = image
+        } else {
+            let weatherType = NightWeatherType(rawValue: weatherCode)!
+            let image = UIImage(named: weatherType.imageName)
+            weatherImageView.image = image
+        }
+        
+        cityLabel.text = cityText
+        currentTempLabel.text = String(currentTemp)
+        minTempLabel.text = String(minTemp)
+        tempProgressView.progress = progress
+        maxTempLabel.text = String(maxTemp)
+        currentTimeLabel.text = currentTime
+    }
+    
+    private func getCity(with timeZone: String) -> String {
+        let components = timeZone.components(separatedBy: "/")
+            if let lastComponent = components.last {
+                return lastComponent
+            }
+            return timeZone
+    }
+    
+    private func progressTemp(max: Double, min: Double, current: Double) -> Float {
+        return Float((current - min)/(max - min))
+    }
+    
+    private func getCurrentTime(withTimeZone timeZone: String) -> String {
+        let formatter = DateFormatter()
+        let timeZone = TimeZone(identifier: timeZone)
+        formatter.timeZone = timeZone
+        formatter.dateFormat = "HH:mm"
+        let time = formatter.string(from: Date())
+        return time
     }
     
     private func setupUI() {
