@@ -20,6 +20,10 @@
 		4DD0EB572BA2FC9100993AF0 /* CitiesProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD0EB522BA2FC9100993AF0 /* CitiesProtocols.swift */; };
 		4DD0EB582BA2FC9100993AF0 /* CitiesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD0EB532BA2FC9100993AF0 /* CitiesInteractor.swift */; };
 		4DD0EB5B2BA2FE2800993AF0 /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD0EB5A2BA2FE2800993AF0 /* CityCell.swift */; };
+		4DD0EB602BA3022A00993AF0 /* CitiesEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD0EB5F2BA3022A00993AF0 /* CitiesEndpoints.swift */; };
+		4DD0EB622BA3023700993AF0 /* CitiesServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD0EB612BA3023700993AF0 /* CitiesServices.swift */; };
+		4DD0EB642BA3024800993AF0 /* Cities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD0EB632BA3024800993AF0 /* Cities.swift */; };
+		4DD0EB682BA303D800993AF0 /* RequestDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD0EB672BA303D800993AF0 /* RequestDecoder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +39,10 @@
 		4DD0EB522BA2FC9100993AF0 /* CitiesProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesProtocols.swift; sourceTree = "<group>"; };
 		4DD0EB532BA2FC9100993AF0 /* CitiesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesInteractor.swift; sourceTree = "<group>"; };
 		4DD0EB5A2BA2FE2800993AF0 /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
+		4DD0EB5F2BA3022A00993AF0 /* CitiesEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesEndpoints.swift; sourceTree = "<group>"; };
+		4DD0EB612BA3023700993AF0 /* CitiesServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesServices.swift; sourceTree = "<group>"; };
+		4DD0EB632BA3024800993AF0 /* Cities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cities.swift; sourceTree = "<group>"; };
+		4DD0EB672BA303D800993AF0 /* RequestDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestDecoder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +78,9 @@
 		4D26512C2BA2F85200AD0384 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				4DD0EB652BA303B100993AF0 /* Common */,
 				4D2651412BA2FA2700AD0384 /* Resources */,
+				4DD0EB5C2BA301E400993AF0 /* Services */,
 				4DD0EB4D2BA2FC6500993AF0 /* Modules */,
 				4D26512D2BA2F85200AD0384 /* AppDelegate.swift */,
 				4D26512F2BA2F85200AD0384 /* SceneDelegate.swift */,
@@ -115,6 +125,48 @@
 				4DD0EB5A2BA2FE2800993AF0 /* CityCell.swift */,
 			);
 			path = CityCell;
+			sourceTree = "<group>";
+		};
+		4DD0EB5C2BA301E400993AF0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4DD0EB5D2BA3020700993AF0 /* Cities */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		4DD0EB5D2BA3020700993AF0 /* Cities */ = {
+			isa = PBXGroup;
+			children = (
+				4DD0EB5E2BA3021200993AF0 /* Model */,
+				4DD0EB5F2BA3022A00993AF0 /* CitiesEndpoints.swift */,
+				4DD0EB612BA3023700993AF0 /* CitiesServices.swift */,
+			);
+			path = Cities;
+			sourceTree = "<group>";
+		};
+		4DD0EB5E2BA3021200993AF0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4DD0EB632BA3024800993AF0 /* Cities.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4DD0EB652BA303B100993AF0 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4DD0EB662BA303B800993AF0 /* Helper */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		4DD0EB662BA303B800993AF0 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				4DD0EB672BA303D800993AF0 /* RequestDecoder.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,8 +251,12 @@
 			files = (
 				4DD0EB542BA2FC9100993AF0 /* CitiesPresenter.swift in Sources */,
 				4DD0EB552BA2FC9100993AF0 /* CitiesRouter.swift in Sources */,
+				4DD0EB622BA3023700993AF0 /* CitiesServices.swift in Sources */,
 				4DD0EB5B2BA2FE2800993AF0 /* CityCell.swift in Sources */,
+				4DD0EB602BA3022A00993AF0 /* CitiesEndpoints.swift in Sources */,
 				4DD0EB562BA2FC9100993AF0 /* CitiesViewController.swift in Sources */,
+				4DD0EB682BA303D800993AF0 /* RequestDecoder.swift in Sources */,
+				4DD0EB642BA3024800993AF0 /* Cities.swift in Sources */,
 				4DD0EB572BA2FC9100993AF0 /* CitiesProtocols.swift in Sources */,
 				4DD0EB582BA2FC9100993AF0 /* CitiesInteractor.swift in Sources */,
 				4D26512E2BA2F85200AD0384 /* AppDelegate.swift in Sources */,
