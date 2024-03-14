@@ -58,6 +58,33 @@ enum NightWeatherType: Int {
         }
     }
     
+    var shortDescription: String {
+        switch self {
+        case .zero, .one:
+            return "Ясно"
+        case .two, .three:
+            return "Облачно"
+        case .fortyFive, .fortyEight:
+            return "Туманно"
+        case .fiftyOne, .fiftyThree, .fiftyFive, .fiftySix, .fiftySeven:
+            return "Моросящий дождь"
+        case .sixtyOne, .sixtyThree, .sixtyFive:
+            return "Дождь"
+        case .sixtySix, .sixtySeven:
+            return "Ледяной дождь"
+        case .seventyOne, .seventyThree, .seventyFive, .seventySeven:
+            return "Снег"
+        case .eighty, .eightyOne, .eightyTwo:
+            return "Ливень"
+        case .eightyFive, .eightySix:
+            return "Снегопады"
+        case .ninetyFive:
+            return "Гроза"
+        case .ninetySix, .ninetyNine:
+            return "Гроза с градом"
+        }
+    }
+    
     var description: String {
         switch self {
         case .zero:
@@ -168,6 +195,33 @@ enum DayWeatherType: Int {
             return "13day"
         case .ninetyFive, .ninetySix, .ninetyNine:
             return "11day"
+        }
+    }
+    
+    var shortDescription: String {
+        switch self {
+        case .zero, .one:
+            return "Солнечно"
+        case .two, .three:
+            return "Облачно"
+        case .fortyFive, .fortyEight:
+            return "Туманно"
+        case .fiftyOne, .fiftyThree, .fiftyFive, .fiftySix, .fiftySeven:
+            return "Моросящий дождь"
+        case .sixtyOne, .sixtyThree, .sixtyFive:
+            return "Дождь"
+        case .sixtySix, .sixtySeven:
+            return "Ледяной дождь"
+        case .seventyOne, .seventyThree, .seventyFive, .seventySeven:
+            return "Снег"
+        case .eighty, .eightyOne, .eightyTwo:
+            return "Ливень"
+        case .eightyFive, .eightySix:
+            return "Снегопады"
+        case .ninetyFive:
+            return "Гроза"
+        case .ninetySix, .ninetyNine:
+            return "Гроза с градом"
         }
     }
     

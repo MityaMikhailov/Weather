@@ -12,7 +12,7 @@ final class CityCell: UITableViewCell {
     
     private lazy var weatherImageView: UIImageView = {
         let imageView = UIImageView()
-        let image = UIImage(named: "01day")
+        let image = UIImage(named: "sun")
         imageView.image = image
         return imageView
     }()
@@ -117,13 +117,15 @@ final class CityCell: UITableViewCell {
         let currentTime = getCurrentTime(withTimeZone: timezone)
         let progress = progressTemp(max: maxTemp, min: minTemp, current: currentTemp)
         
-        if (6...19).contains((Int(currentTime.components(separatedBy: ":").first!)!)) {
+        if (6...18).contains((Int(currentTime.components(separatedBy: ":").first!)!)) {
             let weatherType = DayWeatherType(rawValue: weatherCode)!
             let image = UIImage(named: weatherType.imageName)
+            zeroLabel.text = weatherType.shortDescription
             weatherImageView.image = image
         } else {
             let weatherType = NightWeatherType(rawValue: weatherCode)!
             let image = UIImage(named: weatherType.imageName)
+            zeroLabel.text = weatherType.shortDescription
             weatherImageView.image = image
         }
         
