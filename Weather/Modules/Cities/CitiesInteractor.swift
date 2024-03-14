@@ -12,4 +12,20 @@ import UIKit
 final class CitiesInteractor: CitiesInteractorProtocol {
 
     weak var presenter: CitiesPresenterProtocol?
+    private let citiesService: CitiesServicesProtocol
+    
+    init(container: DependencyContainer) {
+        self.citiesService = container.resolve(CitiesServicesProtocol.self)!
+    }
+    
+    func fetchData() {
+        citiesService.getWeather { [weak self] reslt in
+            switch reslt {
+            case .success(let success):
+                self?.presenter?.handleSuccess(model: success)
+            case .failure(let failure):
+                self?.presenter?.handleFailure(message: failure.localizedDescription)
+            }
+        }
+    }
 }

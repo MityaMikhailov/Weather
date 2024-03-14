@@ -15,17 +15,22 @@ protocol CitiesWireframeProtocol: AnyObject {
 }
 //MARK: Presenter -
 protocol CitiesPresenterProtocol: AnyObject {
-    
+    func viewDidLoad()
+    func handleSuccess(model: Cities)
+    func handleFailure(message: String)
+    func getData() -> Cities?
 }
 
 //MARK: Interactor -
 protocol CitiesInteractorProtocol: AnyObject {
     
     var presenter: CitiesPresenterProtocol?  { get set }
+    func fetchData()
 }
 
 //MARK: View -
 protocol CitiesViewProtocol: AnyObject {
     
     var presenter: CitiesPresenterProtocol?  { get set }
+    func updateView()
 }

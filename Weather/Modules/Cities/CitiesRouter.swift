@@ -8,14 +8,15 @@
 //
 
 import UIKit
+import Swinject
 
 final class CitiesRouter: CitiesWireframeProtocol {
     
     weak var viewController: UIViewController?
     
-    static func createModule() -> UIViewController {
+    static func createModule(container: DependencyContainer) -> UIViewController {
         let view = CitiesViewController()
-        let interactor = CitiesInteractor()
+        let interactor = CitiesInteractor(container: container)
         let router = CitiesRouter()
         let presenter = CitiesPresenter(interface: view, interactor: interactor, router: router)
         

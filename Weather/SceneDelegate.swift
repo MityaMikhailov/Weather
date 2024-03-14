@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import Swinject
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    let assembler = Assembler([DependencyContainerAssembly()])
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -18,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        let viewController = CitiesRouter.createModule()
+        let viewController = CitiesRouter.createModule(container: assembler.resolver)
         let navigationController = UINavigationController(rootViewController: viewController)
         
         let window = UIWindow(windowScene: windowScene)

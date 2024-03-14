@@ -22,6 +22,7 @@ final class CitiesViewController: UIViewController, CitiesViewProtocol {
 
 	override func viewDidLoad() {
         super.viewDidLoad()
+        presenter?.viewDidLoad()
         setupUI()
     }
     
@@ -35,6 +36,10 @@ final class CitiesViewController: UIViewController, CitiesViewProtocol {
             $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
             $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
         }
+    }
+    
+    func updateView() {
+        citiesTable.reloadData()
     }
 
 }
