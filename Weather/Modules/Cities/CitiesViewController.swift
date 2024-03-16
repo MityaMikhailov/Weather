@@ -26,6 +26,7 @@ final class CitiesViewController: UIViewController, CitiesViewProtocol {
         table.isHidden = true
         table.backgroundColor = .white
         table.dataSource = self
+        table.delegate = self
         return table
     }()
 
@@ -78,4 +79,11 @@ extension CitiesViewController: UITableViewDataSource {
     }
     
     
+}
+
+extension CitiesViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let city = model?[indexPath.row] else { return }
+        presenter?.showCityHourly(for: city)
+    }
 }

@@ -26,4 +26,9 @@ final class CitiesRouter: CitiesWireframeProtocol {
         
         return view
     }
+    
+    func pushToCityHourly(with city: City) {
+        let hourlyViewController = HourlyViewController(city: city)
+        viewController?.navigationController?.pushViewController(hourlyViewController, animated: true)
+    }
 }

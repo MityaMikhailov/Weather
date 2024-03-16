@@ -42,5 +42,9 @@ final class CitiesPresenter: CitiesPresenterProtocol {
     func getData() -> Cities? {
         return model
     }
+    
+    func showCityHourly(for city: City) {
+        router.pushToCityHourly(with: city)
+    }
 
 }
