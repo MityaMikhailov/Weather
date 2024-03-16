@@ -19,6 +19,7 @@
 		4D6C040C2BA55EBE00CB5EB3 /* HourlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6C04072BA55EBE00CB5EB3 /* HourlyViewController.swift */; };
 		4D6C040D2BA55EBE00CB5EB3 /* HourlyProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6C04082BA55EBE00CB5EB3 /* HourlyProtocols.swift */; };
 		4D6C040E2BA55EBE00CB5EB3 /* HourlyInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6C04092BA55EBE00CB5EB3 /* HourlyInteractor.swift */; };
+		4D6C04102BA55F0B00CB5EB3 /* HourCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6C040F2BA55F0B00CB5EB3 /* HourCell.swift */; };
 		4DB847932BA33C9B00601F85 /* EnumWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB847922BA33C9B00601F85 /* EnumWeather.swift */; };
 		4DD0EB542BA2FC9100993AF0 /* CitiesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD0EB4F2BA2FC9100993AF0 /* CitiesPresenter.swift */; };
 		4DD0EB552BA2FC9100993AF0 /* CitiesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD0EB502BA2FC9100993AF0 /* CitiesRouter.swift */; };
@@ -45,6 +46,7 @@
 		4D6C04072BA55EBE00CB5EB3 /* HourlyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyViewController.swift; sourceTree = "<group>"; };
 		4D6C04082BA55EBE00CB5EB3 /* HourlyProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyProtocols.swift; sourceTree = "<group>"; };
 		4D6C04092BA55EBE00CB5EB3 /* HourlyInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyInteractor.swift; sourceTree = "<group>"; };
+		4D6C040F2BA55F0B00CB5EB3 /* HourCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourCell.swift; sourceTree = "<group>"; };
 		4DB847922BA33C9B00601F85 /* EnumWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumWeather.swift; sourceTree = "<group>"; };
 		4DD0EB4F2BA2FC9100993AF0 /* CitiesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesPresenter.swift; sourceTree = "<group>"; };
 		4DD0EB502BA2FC9100993AF0 /* CitiesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesRouter.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 		4D6C04042BA55EAD00CB5EB3 /* HourCell */ = {
 			isa = PBXGroup;
 			children = (
+				4D6C040F2BA55F0B00CB5EB3 /* HourCell.swift */,
 			);
 			path = HourCell;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				4D2651302BA2F85200AD0384 /* SceneDelegate.swift in Sources */,
 				4D6C040A2BA55EBE00CB5EB3 /* HourlyPresenter.swift in Sources */,
 				4D6C040B2BA55EBE00CB5EB3 /* HourlyRouter.swift in Sources */,
+				4D6C04102BA55F0B00CB5EB3 /* HourCell.swift in Sources */,
 				4D6C040C2BA55EBE00CB5EB3 /* HourlyViewController.swift in Sources */,
 				4D6C040D2BA55EBE00CB5EB3 /* HourlyProtocols.swift in Sources */,
 				4D6C040E2BA55EBE00CB5EB3 /* HourlyInteractor.swift in Sources */,
