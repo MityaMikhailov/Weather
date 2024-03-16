@@ -18,6 +18,7 @@ final class HourlyViewController: UIViewController, HourlyViewProtocol {
         let label = UILabel()
         label.text = city.timezone?.components(separatedBy: "/").last
         label.textColor = .black
+        label.font = UIFont.systemFont(ofSize: 20)
         return label
     }()
     

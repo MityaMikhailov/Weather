@@ -29,8 +29,8 @@ extension CitiesEndpoints: TargetType {
         switch self {
         case .getWeather:
             let parameters: [String: Any] = [
-                "latitude": "43.2567,55.7522,24.4512",
-                "longitude": "76.9286,37.6156,54.397",
+                "latitude": "43.2567,55.7522,24.4512,55.0415,59.9386,40.4165,43.7333",
+                "longitude": "76.9286,37.6156,54.397,82.9346,30.3141,-3.7026,7",
                 "current": "temperature_2m,weather_code",
                 "hourly": "temperature_2m,weather_code",
                 "daily": "temperature_2m_max,temperature_2m_min",
