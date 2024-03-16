@@ -14,6 +14,11 @@
 		4D2651442BA2FA8F00AD0384 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4D2651432BA2FA8F00AD0384 /* SnapKit */; };
 		4D2651472BA2FAA100AD0384 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 4D2651462BA2FAA100AD0384 /* Moya */; };
 		4D26514A2BA2FAB500AD0384 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 4D2651492BA2FAB500AD0384 /* Swinject */; };
+		4D6C040A2BA55EBE00CB5EB3 /* HourlyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6C04052BA55EBE00CB5EB3 /* HourlyPresenter.swift */; };
+		4D6C040B2BA55EBE00CB5EB3 /* HourlyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6C04062BA55EBE00CB5EB3 /* HourlyRouter.swift */; };
+		4D6C040C2BA55EBE00CB5EB3 /* HourlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6C04072BA55EBE00CB5EB3 /* HourlyViewController.swift */; };
+		4D6C040D2BA55EBE00CB5EB3 /* HourlyProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6C04082BA55EBE00CB5EB3 /* HourlyProtocols.swift */; };
+		4D6C040E2BA55EBE00CB5EB3 /* HourlyInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6C04092BA55EBE00CB5EB3 /* HourlyInteractor.swift */; };
 		4DB847932BA33C9B00601F85 /* EnumWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB847922BA33C9B00601F85 /* EnumWeather.swift */; };
 		4DD0EB542BA2FC9100993AF0 /* CitiesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD0EB4F2BA2FC9100993AF0 /* CitiesPresenter.swift */; };
 		4DD0EB552BA2FC9100993AF0 /* CitiesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD0EB502BA2FC9100993AF0 /* CitiesRouter.swift */; };
@@ -35,6 +40,11 @@
 		4D2651362BA2F85300AD0384 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D2651392BA2F85300AD0384 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D26513B2BA2F85300AD0384 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D6C04052BA55EBE00CB5EB3 /* HourlyPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyPresenter.swift; sourceTree = "<group>"; };
+		4D6C04062BA55EBE00CB5EB3 /* HourlyRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyRouter.swift; sourceTree = "<group>"; };
+		4D6C04072BA55EBE00CB5EB3 /* HourlyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyViewController.swift; sourceTree = "<group>"; };
+		4D6C04082BA55EBE00CB5EB3 /* HourlyProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyProtocols.swift; sourceTree = "<group>"; };
+		4D6C04092BA55EBE00CB5EB3 /* HourlyInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyInteractor.swift; sourceTree = "<group>"; };
 		4DB847922BA33C9B00601F85 /* EnumWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumWeather.swift; sourceTree = "<group>"; };
 		4DD0EB4F2BA2FC9100993AF0 /* CitiesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesPresenter.swift; sourceTree = "<group>"; };
 		4DD0EB502BA2FC9100993AF0 /* CitiesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesRouter.swift; sourceTree = "<group>"; };
@@ -102,10 +112,31 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		4D6C04032BA55E9600CB5EB3 /* Hourly */ = {
+			isa = PBXGroup;
+			children = (
+				4D6C04042BA55EAD00CB5EB3 /* HourCell */,
+				4D6C04052BA55EBE00CB5EB3 /* HourlyPresenter.swift */,
+				4D6C04062BA55EBE00CB5EB3 /* HourlyRouter.swift */,
+				4D6C04072BA55EBE00CB5EB3 /* HourlyViewController.swift */,
+				4D6C04082BA55EBE00CB5EB3 /* HourlyProtocols.swift */,
+				4D6C04092BA55EBE00CB5EB3 /* HourlyInteractor.swift */,
+			);
+			path = Hourly;
+			sourceTree = "<group>";
+		};
+		4D6C04042BA55EAD00CB5EB3 /* HourCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HourCell;
+			sourceTree = "<group>";
+		};
 		4DD0EB4D2BA2FC6500993AF0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
 				4DD0EB4E2BA2FC7900993AF0 /* Cities */,
+				4D6C04032BA55E9600CB5EB3 /* Hourly */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -268,6 +299,11 @@
 				4DD0EB582BA2FC9100993AF0 /* CitiesInteractor.swift in Sources */,
 				4D26512E2BA2F85200AD0384 /* AppDelegate.swift in Sources */,
 				4D2651302BA2F85200AD0384 /* SceneDelegate.swift in Sources */,
+				4D6C040A2BA55EBE00CB5EB3 /* HourlyPresenter.swift in Sources */,
+				4D6C040B2BA55EBE00CB5EB3 /* HourlyRouter.swift in Sources */,
+				4D6C040C2BA55EBE00CB5EB3 /* HourlyViewController.swift in Sources */,
+				4D6C040D2BA55EBE00CB5EB3 /* HourlyProtocols.swift in Sources */,
+				4D6C040E2BA55EBE00CB5EB3 /* HourlyInteractor.swift in Sources */,
 				4DD0EB6A2BA307A100993AF0 /* DependecyContainerAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
