@@ -46,5 +46,9 @@ final class CitiesPresenter: CitiesPresenterProtocol {
     func showCityHourly(for city: City) {
         router.pushToCityHourly(with: city)
     }
+    
+    func showCitySearch() {
+        router.pushToCitySearch()
+    }
 
 }

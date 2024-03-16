@@ -20,6 +20,11 @@
 		4D6C040D2BA55EBE00CB5EB3 /* HourlyProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6C04082BA55EBE00CB5EB3 /* HourlyProtocols.swift */; };
 		4D6C040E2BA55EBE00CB5EB3 /* HourlyInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6C04092BA55EBE00CB5EB3 /* HourlyInteractor.swift */; };
 		4D6C04102BA55F0B00CB5EB3 /* HourCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6C040F2BA55F0B00CB5EB3 /* HourCell.swift */; };
+		4D6C04162BA595EC00CB5EB3 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6C04112BA595EC00CB5EB3 /* SearchPresenter.swift */; };
+		4D6C04172BA595EC00CB5EB3 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6C04122BA595EC00CB5EB3 /* SearchRouter.swift */; };
+		4D6C04182BA595EC00CB5EB3 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6C04132BA595EC00CB5EB3 /* SearchViewController.swift */; };
+		4D6C04192BA595EC00CB5EB3 /* SearchProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6C04142BA595EC00CB5EB3 /* SearchProtocols.swift */; };
+		4D6C041A2BA595EC00CB5EB3 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6C04152BA595EC00CB5EB3 /* SearchInteractor.swift */; };
 		4DB847932BA33C9B00601F85 /* EnumWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB847922BA33C9B00601F85 /* EnumWeather.swift */; };
 		4DD0EB542BA2FC9100993AF0 /* CitiesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD0EB4F2BA2FC9100993AF0 /* CitiesPresenter.swift */; };
 		4DD0EB552BA2FC9100993AF0 /* CitiesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD0EB502BA2FC9100993AF0 /* CitiesRouter.swift */; };
@@ -47,6 +52,11 @@
 		4D6C04082BA55EBE00CB5EB3 /* HourlyProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyProtocols.swift; sourceTree = "<group>"; };
 		4D6C04092BA55EBE00CB5EB3 /* HourlyInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyInteractor.swift; sourceTree = "<group>"; };
 		4D6C040F2BA55F0B00CB5EB3 /* HourCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourCell.swift; sourceTree = "<group>"; };
+		4D6C04112BA595EC00CB5EB3 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
+		4D6C04122BA595EC00CB5EB3 /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
+		4D6C04132BA595EC00CB5EB3 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		4D6C04142BA595EC00CB5EB3 /* SearchProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProtocols.swift; sourceTree = "<group>"; };
+		4D6C04152BA595EC00CB5EB3 /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
 		4DB847922BA33C9B00601F85 /* EnumWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumWeather.swift; sourceTree = "<group>"; };
 		4DD0EB4F2BA2FC9100993AF0 /* CitiesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesPresenter.swift; sourceTree = "<group>"; };
 		4DD0EB502BA2FC9100993AF0 /* CitiesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesRouter.swift; sourceTree = "<group>"; };
@@ -135,11 +145,24 @@
 			path = HourCell;
 			sourceTree = "<group>";
 		};
+		4D6C041B2BA595FF00CB5EB3 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				4D6C04112BA595EC00CB5EB3 /* SearchPresenter.swift */,
+				4D6C04122BA595EC00CB5EB3 /* SearchRouter.swift */,
+				4D6C04132BA595EC00CB5EB3 /* SearchViewController.swift */,
+				4D6C04142BA595EC00CB5EB3 /* SearchProtocols.swift */,
+				4D6C04152BA595EC00CB5EB3 /* SearchInteractor.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		4DD0EB4D2BA2FC6500993AF0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
 				4DD0EB4E2BA2FC7900993AF0 /* Cities */,
 				4D6C04032BA55E9600CB5EB3 /* Hourly */,
+				4D6C041B2BA595FF00CB5EB3 /* Search */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -307,6 +330,11 @@
 				4D6C04102BA55F0B00CB5EB3 /* HourCell.swift in Sources */,
 				4D6C040C2BA55EBE00CB5EB3 /* HourlyViewController.swift in Sources */,
 				4D6C040D2BA55EBE00CB5EB3 /* HourlyProtocols.swift in Sources */,
+				4D6C04162BA595EC00CB5EB3 /* SearchPresenter.swift in Sources */,
+				4D6C04172BA595EC00CB5EB3 /* SearchRouter.swift in Sources */,
+				4D6C04182BA595EC00CB5EB3 /* SearchViewController.swift in Sources */,
+				4D6C04192BA595EC00CB5EB3 /* SearchProtocols.swift in Sources */,
+				4D6C041A2BA595EC00CB5EB3 /* SearchInteractor.swift in Sources */,
 				4D6C040E2BA55EBE00CB5EB3 /* HourlyInteractor.swift in Sources */,
 				4DD0EB6A2BA307A100993AF0 /* DependecyContainerAssembly.swift in Sources */,
 			);

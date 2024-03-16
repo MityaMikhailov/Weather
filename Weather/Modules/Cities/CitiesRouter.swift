@@ -31,4 +31,9 @@ final class CitiesRouter: CitiesWireframeProtocol {
         let hourlyViewController = HourlyViewController(city: city)
         viewController?.navigationController?.pushViewController(hourlyViewController, animated: true)
     }
+    
+    func pushToCitySearch() {
+        let searchViewController = SearchViewController()
+        viewController?.navigationController?.pushViewController(searchViewController, animated: true)
+    }
 }

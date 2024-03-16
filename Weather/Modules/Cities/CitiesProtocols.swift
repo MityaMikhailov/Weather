@@ -12,6 +12,7 @@ import Foundation
 //MARK: Wireframe -
 protocol CitiesWireframeProtocol: AnyObject {
     func pushToCityHourly(with city: City)
+    func pushToCitySearch()
 }
 //MARK: Presenter -
 protocol CitiesPresenterProtocol: AnyObject {
@@ -20,6 +21,7 @@ protocol CitiesPresenterProtocol: AnyObject {
     func handleFailure(message: String)
     func getData() -> Cities?
     func showCityHourly(for city: City)
+    func showCitySearch()
 }
 
 //MARK: Interactor -

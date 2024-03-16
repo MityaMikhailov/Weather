@@ -14,6 +14,11 @@ final class CitiesViewController: UIViewController, CitiesViewProtocol {
     var presenter: CitiesPresenterProtocol?
     var model: Cities?
     
+    private lazy var addButton: UIBarButtonItem = {
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
+        return addButton
+    }()
+    
     private lazy var loader: UIActivityIndicatorView = {
         let loader = UIActivityIndicatorView(style: .large)
         loader.color = .white
@@ -44,6 +49,7 @@ final class CitiesViewController: UIViewController, CitiesViewProtocol {
     }
     
     func setupUI() {
+        navigationItem.rightBarButtonItem = addButton
         loader.startAnimating()
         view.backgroundColor = .white
         
@@ -71,6 +77,10 @@ final class CitiesViewController: UIViewController, CitiesViewProtocol {
         citiesTable.isHidden = false
     }
 
+    @objc func addButtonTapped() {
+        presenter?.showCitySearch()
+    }
+    
 }
 
 extension CitiesViewController: UITableViewDataSource {
