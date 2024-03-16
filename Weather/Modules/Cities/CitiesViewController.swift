@@ -36,6 +36,13 @@ final class CitiesViewController: UIViewController, CitiesViewProtocol {
         setupUI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let selectedIndexPath = citiesTable.indexPathForSelectedRow {
+            citiesTable.deselectRow(at: selectedIndexPath, animated: true)
+        }
+    }
+    
     func setupUI() {
         loader.startAnimating()
         view.backgroundColor = .white

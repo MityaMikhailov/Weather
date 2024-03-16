@@ -90,59 +90,59 @@ enum NightWeatherType: Int {
         case .zero:
             return "Ясно"
         case .one:
-            return "В основном ясно"
+            return "В основном\nясно"
         case .two:
-            return "Частично облачно"
+            return "Частично\nоблачно"
         case .three:
             return "Облачно"
         case .fortyFive:
             return "Туманно"
         case .fortyEight:
-            return "Инейный туман"
+            return "Инейный\nтуман"
         case .fiftyOne:
-            return "Небольшой моросящий дождь"
+            return "Небольшой\nморосящий\nдождь"
         case .fiftyThree:
-            return "Моросящий дождь"
+            return "Моросящий\nдождь"
         case .fiftyFive:
-            return "Сильный моросящий дождь"
+            return "Сильный\nморосящий\nдождь"
         case .fiftySix:
-            return "Небольшой ледяной моросящий дождь"
+            return "Небольшой\nледяной\nморосящий\nдождь"
         case .fiftySeven:
-            return "Ледяной моросящий дождь"
+            return "Ледяной\nморосящий\nдождь"
         case .sixtyOne:
-            return "Небольшой дождь"
+            return "Небольшой\nдождь"
         case .sixtyThree:
             return "Дождь"
         case .sixtyFive:
-            return "Сильный дождь"
+            return "Сильный\nдождь"
         case .sixtySix:
-            return "Небольшой ледяной дождь"
+            return "Небольшой\nледяной\nдождь"
         case .sixtySeven:
-            return "Ледяной дождь"
+            return "Ледяной\nдождь"
         case .seventyOne:
-            return "Небольшой снег"
+            return "Небольшой\nснег"
         case .seventyThree:
             return "Снег"
         case .seventyFive:
-            return "Сильный снег"
+            return "Сильный\nснег"
         case .seventySeven:
-            return "Снежные зерна"
+            return "Снежные\nзерна"
         case .eighty:
-            return "Небольшие ливни"
+            return "Небольшие\nливни"
         case .eightyOne:
             return "Ливни"
         case .eightyTwo:
-            return "Сильные ливни"
+            return "Сильные\nливни"
         case .eightyFive:
-            return "Небольшие снегопады"
+            return "Небольшие\nснегопады"
         case .eightySix:
             return "Снегопады"
         case .ninetyFive:
             return "Гроза"
         case .ninetySix:
-            return "Небольшие грозы с градом"
+            return "Небольшие\nгрозы\nс градом"
         case .ninetyNine:
-            return "Гроза с градом"
+            return "Гроза\nс градом"
         }
     }
 }
@@ -230,59 +230,59 @@ enum DayWeatherType: Int {
         case .zero:
             return "Солнечно"
         case .one:
-            return "В основном солнечно"
+            return "В основном\nсолнечно"
         case .two:
-            return "Частично облачно"
+            return "Частично\nоблачно"
         case .three:
             return "Облачно"
         case .fortyFive:
             return "Туманно"
         case .fortyEight:
-            return "Инейный туман"
+            return "Инейный\nтуман"
         case .fiftyOne:
-            return "Небольшой моросящий дождь"
+            return "Небольшой\nморосящий\nдождь"
         case .fiftyThree:
-            return "Моросящий дождь"
+            return "Моросящий\nдождь"
         case .fiftyFive:
-            return "Сильный моросящий дождь"
+            return "Сильный\nморосящий\nдождь"
         case .fiftySix:
-            return "Небольшой ледяной моросящий дождь"
+            return "Небольшой\nледяной\nморосящий\nдождь"
         case .fiftySeven:
-            return "Ледяной моросящий дождь"
+            return "Ледяной\nморосящий\nдождь"
         case .sixtyOne:
-            return "Небольшой дождь"
+            return "Небольшой\nдождь"
         case .sixtyThree:
             return "Дождь"
         case .sixtyFive:
-            return "Сильный дождь"
+            return "Сильный\nдождь"
         case .sixtySix:
-            return "Небольшой ледяной дождь"
+            return "Небольшой\nледяной\nдождь"
         case .sixtySeven:
-            return "Ледяной дождь"
+            return "Ледяной\nдождь"
         case .seventyOne:
-            return "Небольшой снег"
+            return "Небольшой\nснег"
         case .seventyThree:
             return "Снег"
         case .seventyFive:
-            return "Сильный снег"
+            return "Сильный\nснег"
         case .seventySeven:
-            return "Снежные зерна"
+            return "Снежные\nзерна"
         case .eighty:
-            return "Небольшие ливни"
+            return "Небольшие\nливни"
         case .eightyOne:
             return "Ливни"
         case .eightyTwo:
-            return "Сильные ливни"
+            return "Сильные\nливни"
         case .eightyFive:
-            return "Небольшие снегопады"
+            return "Небольшие\nснегопады"
         case .eightySix:
             return "Снегопады"
         case .ninetyFive:
             return "Гроза"
         case .ninetySix:
-            return "Небольшие грозы с градом"
+            return "Небольшие\nгрозы\nс градом"
         case .ninetyNine:
-            return "Гроза с градом"
+            return "Гроза\nс градом"
         }
     }
 }
