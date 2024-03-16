@@ -33,6 +33,11 @@ final class HourlyViewController: UIViewController, HourlyViewProtocol {
         setupUI()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        scrollAndDeselect()
+    }
+    
     init(city: City) {
         self.city = city
         super.init(nibName: nil, bundle: nil)
@@ -58,6 +63,44 @@ final class HourlyViewController: UIViewController, HourlyViewProtocol {
             $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
             $0.right.equalTo(view.safeAreaLayoutGuide.snp.right)
         }
+    }
+    
+    private func scrollAndDeselect() {
+        hourlyTable.isUserInteractionEnabled = false
+        
+        guard let index = findIndex() else { return }
+        let indexPath = IndexPath(row: index, section: 0)
+    
+        hourlyTable.scrollToRow(at: indexPath, at: .top, animated: true)
+    
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.hourlyTable.selectRow(at: indexPath, animated: true, scrollPosition: .none)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.hourlyTable.deselectRow(at: indexPath, animated: true)
+                self.hourlyTable.allowsSelection = false
+                self.hourlyTable.isUserInteractionEnabled = true
+            }
+        }
+    }
+    
+    private func findIndex() -> Int?{
+        guard let timezoneAbbreviation = city.timezone,
+              let arrayTime = city.hourly?.time else {return 0}
+        
+        let currentTime = getCurrentTime(withTimeZone: timezoneAbbreviation)
+        let index = arrayTime.firstIndex(of: currentTime)
+        
+        return index
+    }
+    
+    func getCurrentTime(withTimeZone timezoneAbbreviation: String) -> String {
+        let timezone = TimeZone(identifier: timezoneAbbreviation)
+        let formatter = DateFormatter()
+        formatter.timeZone = timezone
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:00"
+        let currentTime = formatter.string(from: Date())
+        return currentTime
     }
     
 }

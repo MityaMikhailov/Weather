@@ -46,36 +46,38 @@ final class HourCell: UITableViewCell {
     }
     
     private func setupUI() {
+        let selectedView = UIView()
+        selectedView.backgroundColor = UIColor.systemCyan
+        self.selectedBackgroundView = selectedView
         self.backgroundColor = .white
-        self.selectionStyle = .none
         addSubview(timeLabel)
         addSubview(weatherImage)
         addSubview(temperatureLabel)
         addSubview(descriptionLabel)
         
         timeLabel.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(16)
-            $0.left.equalToSuperview().offset(16)
-            $0.bottom.equalToSuperview().inset(16)
+            $0.top.equalToSuperview().offset(8)
+            $0.left.equalToSuperview().offset(8)
+            $0.bottom.equalToSuperview().inset(8)
         }
         
         weatherImage.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(16)
-            $0.left.equalTo(timeLabel.snp.right).offset(16)
-            $0.bottom.equalToSuperview().inset(16)
+            $0.top.equalToSuperview().offset(8)
+            $0.left.equalTo(timeLabel.snp.right).offset(8)
+            $0.bottom.equalToSuperview().inset(8)
         }
         
         temperatureLabel.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(16)
-            $0.left.equalTo(weatherImage.snp.right).offset(16)
-            $0.bottom.equalToSuperview().inset(16)
+            $0.top.equalToSuperview().offset(8)
+            $0.left.equalTo(weatherImage.snp.right).offset(8)
+            $0.bottom.equalToSuperview().inset(8)
         }
         
         descriptionLabel.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(16)
-            $0.left.equalTo(temperatureLabel.snp.right).offset(16)
-            $0.bottom.equalToSuperview().inset(16)
-            $0.right.equalToSuperview()
+            $0.top.equalToSuperview().offset(8)
+            $0.left.equalTo(temperatureLabel.snp.right).offset(8)
+            $0.bottom.equalToSuperview().inset(8)
+            $0.right.equalToSuperview().inset(8)
         }
         
     }
