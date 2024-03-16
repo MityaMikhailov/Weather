@@ -160,6 +160,9 @@ final class CityCell: UITableViewCell {
     
     private func setupUI() {
         backgroundColor = .white
+        let selectedView = UIView()
+        selectedView.backgroundColor = UIColor.systemCyan
+        self.selectedBackgroundView = selectedView
         
         addSubview(currentImageTimeStack)
         addSubview(cityTempProgressStack)
