@@ -10,12 +10,20 @@
 import UIKit
 
 final class CitiesViewController: UIViewController, CitiesViewProtocol {
-
-	var presenter: CitiesPresenterProtocol?
+    
+    var presenter: CitiesPresenterProtocol?
     var model: Cities?
+    
+    private lazy var loader: UIActivityIndicatorView = {
+        let loader = UIActivityIndicatorView(style: .large)
+        loader.color = .white
+        loader.backgroundColor = .systemCyan
+        return loader
+    }()
     
     private lazy var citiesTable: UITableView = {
         let table = UITableView()
+        table.isHidden = true
         table.backgroundColor = .white
         table.dataSource = self
         return table
@@ -28,8 +36,18 @@ final class CitiesViewController: UIViewController, CitiesViewProtocol {
     }
     
     func setupUI() {
+        loader.startAnimating()
         view.backgroundColor = .white
+        
         view.addSubview(citiesTable)
+        view.addSubview(loader)
+        
+        loader.snp.makeConstraints {
+            $0.left.equalToSuperview()
+            $0.right.equalToSuperview()
+            $0.top.equalToSuperview()
+            $0.bottom.equalToSuperview()
+        }
         
         citiesTable.snp.makeConstraints {
             $0.left.equalTo(view.safeAreaLayoutGuide.snp.left)
@@ -41,6 +59,8 @@ final class CitiesViewController: UIViewController, CitiesViewProtocol {
     
     func updateView() {
         citiesTable.reloadData()
+        loader.stopAnimating()
+        citiesTable.isHidden = false
     }
 
 }
